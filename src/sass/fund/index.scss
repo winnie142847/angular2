@@ -1,0 +1,623 @@
+  @charset "utf-8";
+  @import "../base/reset";
+  @import "../components/_iSlider.min";
+  /*基金经理插件渲染有坑*/
+  
+  body {
+      display: none;
+  }
+
+  //头部
+  .fundindex_content {
+      height: auto;
+      width: 100%;
+      padding-bottom: 3rem;
+  }
+
+  .fundidnex_search {
+      position: absolute;
+      left: 5%;
+      top: .5%;
+      width: 90%;
+      height: 2rem;
+      background: #fff url('../../../assets/img/search_on.png') no-repeat right;
+      background-size: 9% auto;
+      z-index: 1;
+      border-radius: 1rem;
+      line-height: 2rem;
+      text-indent: 1.5rem;
+      color: #b8b7b7;
+      font-size: .9rem;
+  }
+  
+  .fundindex_banner {
+      width: 100%;
+      height: 10rem;
+      margin: 0 auto;
+      position: relative;
+      overflow: hidden;
+      background: #efeff4;
+      .fundindex_bannerhd {
+          width: 100%;
+          height: 1rem;
+          position: absolute;
+          z-index: 1;
+          bottom: .5rem;
+          text-align: center;
+          ul {
+              display: inline-block;
+              height: .5rem;
+              padding: .3rem .5rem;
+              font-size: 0;
+              vertical-align: top;
+              li {
+                  display: inline-block;
+                  width: .4rem;
+                  height: .4rem;
+                  border-radius: .5rem;
+                  background: rgba(255, 255, 255, 0.5);
+                  margin: 0 .5rem;
+                  vertical-align: top;
+                  overflow: hidden;
+              }
+              .on {
+                  background: #fff;
+              }
+          }
+      }
+      .fundindex_bannerbd {
+          position: relative;
+          z-index: 0;
+          li {
+              img {
+                  width: 100%;
+                  height: 10rem;
+                  background: url(../../../assets/img/load.gif) center center no-repeat;
+              }
+              a {
+                  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+              }
+          }
+      }
+  }
+  /*banner结束*/
+
+  .fundindex_warp {
+    display: flex;  
+    }
+  
+  .fundindex_route {
+      width: 100%;
+      letter-spacing: .05rem;
+  }
+  
+  .route_container {
+    flex-direction: row;
+      width: 25%;
+      text-align: center;
+  }
+  
+  .fund_rank,
+  .fund_devers,
+  .fund_company,
+  .fund_fund {
+      position: relative;
+      height: 90%;
+      width: 100%;
+      margin-top: 7%;
+  }
+  
+  .route_container span {
+      display: inline-block;
+      margin-top: 82%;
+      color: #474747;
+  }
+  
+  .fund_rank {
+      background: no-repeat url('../../../static/fund/include/index_img/paihang.png');
+      background-position: center .85rem;
+      background-size: 60% auto;
+  }
+  
+  .fund_devers {
+      background: no-repeat url('../../../static/fund/include/index_img/guzhi.png');
+      background-size: 60% auto;
+      background-position: center .85rem;
+  }
+  
+  .fund_company {
+      background: no-repeat url('../../../static/fund/include/index_img/company.png');
+      background-size: 60% auto;
+      background-position: center .85rem;
+  }
+  
+  .fund_fund {
+      background: no-repeat url('../../../static/fund/include/index_img/filter.png');
+      background-size: 60% auto;
+      background-position: center .85rem;
+  }
+  
+  .fundindex_tag {
+      
+      background-color: #f5f8fc;
+      height: 2.5rem;
+  }
+  
+  .fundindex_indexdata {
+      display: flex;
+      border: 1px solid #d8dcee;
+      width: 90%;
+      margin: 1rem auto .5rem auto;
+      padding: .5rem;
+  }
+  
+  .indexdata_shindex,
+  .indexdata_szindex,
+  .indexdata_cyindex {
+      -webkit-flex-direction: row;
+      flex-direction: row;
+      width: 25%;
+  }
+  
+  .indexdata_shindex {
+      margin: 0 .3rem;
+  }
+  
+  .indexdata_szindex {
+      margin: 0 2.1rem;
+  }
+  
+  .indexdata_cyindex {
+      margin: 0 .3rem;
+  }
+  
+  .index_name,
+  .index_num,
+  .index_state {
+      display: block;
+      text-align: center;
+  }
+  
+  .index_name {
+      font-size: .9rem;
+      color: #6e6e6e;
+  }
+  
+  .index_num {
+      font-size: 1.2rem;
+  }
+  
+  .index_state {
+      font-size: .7rem;
+  }
+  /*数据*/
+  
+  .fundindex_list {
+      width: 100%;
+      height: auto;
+      /*border-top: 1px solid #e4e4e4;*/
+  }
+  
+  .fundindex_listtitle {
+      text-align: center;
+      height: 2.4rem;
+      line-height: 2.4rem;
+      font-size: .8rem;
+      color: #999;
+      background-color: #f5f8fc;
+      span {
+          font-size: 1rem;
+          color: #353535;
+      }
+  }
+  
+  .fundindex_data {
+      padding: 1rem;
+      border-bottom: 01px solid #e4e4e4;
+  }
+  
+  .data_forward {
+      display: inline-block;
+      width: 16rem;
+      margin-right: 1rem;
+      vertical-align: top;
+  }
+  
+  .data_backward {
+      display: inline-block;
+      /*float: right;*/
+      border-radius: 50%;
+      overflow: hidden;
+      width: 5.5rem;
+      height: 5.5rem;
+      background-image: linear-gradient(-90deg, #f24957 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), linear-gradient(-90deg, #f24957 50%, #dddde6 50%, #dddde6);
+  }
+  
+  .overlay {
+      background-color: #fff;
+      border-radius: 50%;
+      text-align: center;
+      width: 86%;
+      height: 86%;
+      margin-left: 7%;
+      margin-top: 7%;
+      font-size: 1.2rem;
+  }
+  
+  .data_fname {
+      color: #6e6e6e;
+  }
+  
+  .data_invtyp,
+  .data_fcode {
+      color: #b2b2c5;
+      margin-left: .5rem;
+  }
+  
+  .data_forward_up {
+      margin-top: .2rem;
+  }
+  
+  .data_forward_down {
+      margin-top: .8rem;
+  }
+  
+  .data_cat {
+      border: 1px solid #ffa82c;
+      border-radius: 4px;
+      padding: 0rem .2rem;
+      color: #ffa82c;
+      font-size: .8rem;
+      vertical-align: middle;
+      margin-right: .5rem;
+  }
+  
+  .data_situp {
+      border: 1px solid #f24957;
+      border-radius: 4px;
+      padding: 0rem .2rem;
+      color: #f24957;
+      margin-right: .5rem;
+      font-size: .8rem;
+      vertical-align: middle;
+  }
+  
+  .data_sitdown {
+      border: 1px solid #1dbf60;
+      border-radius: 4px;
+      padding: 0rem .2rem;
+      margin-right: .5rem;
+      font-size: .8rem;
+      vertical-align: middle;
+      color: #1dbf60;
+  }
+  
+  .data_t {
+      color: #353535;
+      font-size: 1.1rem;
+      vertical-align: middle;
+  }
+  
+  .fundindex_more {
+      text-align: center;
+      color: #b2b2c5;
+      padding: 1rem 0;
+  }
+  
+  .data_up {
+      display: inline-block;
+      margin-top: .85rem;
+      font-size: .9rem;
+  }
+  
+  .data_num {
+      font-size: 1rem;
+      margin-top: .2rem;
+  }
+  
+  .fundindex_upinfor {
+      border-top: 1px solid #e4e4e4;
+  }
+  
+  .fundindex_title {
+      background-color: #f5f8fc;
+      padding: .5rem 0;
+  }
+  
+  .fundindex_mr {
+      float: right;
+      height: 1rem;
+      width: 1.2rem;
+      margin-right: 1rem;
+      vertical-align: middle;
+      background: no-repeat url('../../../static/fund/include/index_img/more.png') center 0.5rem;
+      background-size: 100% auto;
+  }
+  
+  .fundindex_icon {
+      display: inline-block;
+      vertical-align: middle;
+      width: .25rem;
+      height: 1.3rem;
+      background-color: #ff6e4b;
+      border-radius: .5rem;
+      margin: 0 .8rem;
+  }
+  
+  .fundindex_subtitle {
+      color: #353535;
+  }
+  
+  .bordtitle {
+      position: relative;
+      padding: .8rem .5rem;
+      color: #ffffff;
+      background-color: #fb8d8d;
+  }
+  
+  .bordtitle_y {
+      position: relative;
+      padding: .8rem .5rem;
+      color: #fff;
+      background-color: #d1c0a5;
+  }
+  
+  .bordtitle span,
+  .bordtitle_y span {
+      vertical-align: middle;
+  }
+  
+  .bordsubt {
+      position: relative;
+      display: inline-block;
+      left: 10.5rem;
+      text-align: right;
+      font-size: .9rem;
+  }
+
+  .bord_ctn {
+      width: 93%;
+      margin-left: 4%;
+      padding-left: 3%;
+      border-left: 1px solid #fb8d8d;
+      li:last-child {
+          border-bottom:none;
+      }
+  }
+  
+  .index_ctn {
+      width: 93%;
+      margin-left: 4%;
+      border-left: 1px solid #d1c0a5;
+      padding-left: 3%;
+      li:last-child {
+          border-bottom: none;
+      }
+  }
+  
+  .bord_num {
+      font-style: normal;
+      font-size: 1.2rem;
+  }
+  
+  .bordname {
+      display: inline-block;
+      width: 8rem;
+  }
+  
+  .bdicon_last {
+      /*border: 1px solid;*/
+      display: inline-block;
+      position: relative;
+      width: .5rem;
+      height: 2.25rem;
+      background-color: white;
+      margin: .5rem 0 0 0;
+  }
+  
+  .bord_icon {
+      width: .5rem;
+      height: .5rem;
+      display: block;
+      position: absolute;
+      border-radius: 1rem;
+      background: #fb8d8d;
+      margin: 9% 0 0 -4%;
+  }
+  
+  .index_icon {
+      width: .5rem;
+      height: .5rem;
+      display: block;
+      position: absolute;
+      border-radius: 1rem;
+      background: #d1c0a5;
+      margin: 9% 0 0 -4%;
+  }
+  
+  .bord_data {
+      border-bottom: 1px solid #e4e4e4;
+  }
+  
+  .bord_dt {
+      display: inline-block;
+      padding: 1rem 1rem 1rem 0;
+      div {
+          display: inline-block;
+          width: 12rem;
+          vertical-align: middle;
+          height: 3rem;
+      }
+  }
+  
+  .bd_dtname {
+      display: inline-block;
+      width: 9rem;
+      font-size: 1.1rem;
+      color: #353535;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+  }
+  
+  .bd_dtcode {
+      display: inline-block;
+      margin-top: .2rem;
+      color: #b2b2c5;
+  }
+  
+  .bd_dtpercent {
+      vertical-align: middle;
+      margin-left: 5rem;
+      font-size: 1.2rem;
+  }
+  
+  .fnlist_hidden {
+      display: none;
+  }
+  
+  .info_data {
+      margin-left: 4%;
+      padding: 1rem 0;
+      border-bottom: 1px solid #e4e4e4;
+  }
+  
+  .info_title {
+      display: inline-block;
+      width: 16rem;
+      margin-right: 1rem;
+      vertical-align: middle;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+  }
+  
+  .info_ctn li:last-child {
+      border: none;
+  }
+  
+  .info_dt {
+      float: right;
+      margin-right: 1rem;
+      color: #b2b2c5;
+      vertical-align: middle;
+  }
+  /*islider start*/
+  
+  body {
+      position: relative;
+      width: 100%;
+  }
+  
+  #slider {
+      border: 1px solid #ddd;
+      display: inline-block;
+      width: 100%;
+      height: 28rem;
+      margin: 0 auto;
+      background: no-repeat url('../../../static/fund/include/index_img/bggrund.png');
+  }
+  
+  .fundmanager_card {
+      border: 1px solid #ddd;
+      width: 99%;
+      height: 99%;
+      background: #ffffff;
+      border-radius: 1rem;
+      text-align: center;
+      /*margin: 0 2rem;*/
+      span {
+          display: block;
+      }
+  }
+  
+  .fundmanager {
+      width: 100%;
+      position: relative;
+  }
+  
+  .manager_title {
+      position: absolute;
+      width: 100%;
+      margin-top: 1.5rem;
+      text-align: center;
+      color: #ffffff;
+      z-index: 3;
+  }
+  
+  .mag_name {
+      font-size: 1.7rem;
+      padding: .2rem 0 .1rem 0;
+  }
+  
+  .mag_cmp {
+      font-size: 1.2rem;
+      color: #b2b2c5;
+  }
+  
+  .mag_star {
+      display: inline-block;
+      width: 20rem;
+      height: 2rem;
+      border-bottom: 1px solid #e4e4e4;
+      margin: .8rem 0 1rem 0;
+      padding-bottom: 1.2rem;
+  }
+  
+  .mag_fullcmp {
+      font-size: 1.4rem;
+  }
+  
+  .mag_back {
+      color: #656565;
+      margin: .8rem 0 .7rem 0;
+      font-size: 1.2rem;
+  }
+  
+  .mag_percent {
+      font-size: 2rem;
+      font-weight: bold;
+  }
+  
+  .stars {
+      display: inline-block;
+      width: 2.2rem;
+      height: 2rem;
+      margin: 0 0 1rem 0;
+      background: no-repeat url('../../../static/fund/include/index_img/star.png') center center;
+      background-size: auto 100%;
+  }
+  
+  .manager_more {
+      display: inline-block;
+      position: absolute;
+      right: 0;
+      width: 3rem;
+      background: no-repeat url('../../../static/fund/include/index_img/wmore.png');
+      background-position: .1rem center;
+      background-size: auto 40%;
+      height: 1rem;
+  }
+  
+  .mag_head {
+      width: 5.5rem;
+      height: 5.5rem;
+      margin: 2rem auto 0 auto;
+      background: no-repeat url('../../../static/fund/include/index_img/hdimg.png') center center;
+      background-size: 100% 100%;
+  }
+  
+  .mag_headman {
+      background: no-repeat url('../../../static/fund/include/index_img/man.png') center center;
+  }
+  
+  .mag_headwomen {
+      background: no-repeat url('../../../static/fund/include/index_img/women.png') center center;
+  }
+  /*islider end*/
+  
+  @media only screen and (device-height: 480px) and (-webkit-min-device-pixel-ratio: 2) {}
+  /* iphone 5 */
+  
+  @media only screen and (device-height: 568px) and (max-device-width: 640px) and (-webkit-min-device-pixel-ratio: 2) {}
+

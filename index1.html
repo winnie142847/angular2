@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>首页</title>
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    <meta name="format-detection" content="telephone=no,email=no,adress=no">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <!-- 公共样式表 -->
+    <link rel="stylesheet" href="static/fund/include/index.css">
+    <link rel="stylesheet" href="assets/css/iSlider.min.css">
+</head>
+
+<body>
+    <div id="footer">
+        <i class="home sl" data-url="index.html"></i><i class="cust" data-url="static/cust_fund/index.html"></i><i class="fin" data-url="static/fin/index.html"></i>
+    </div>
+    <div class="fundindex_content">
+        <div class="fundidnex_search">搜索基金名称/代码</div>
+        <div id="focus" class="fundindex_banner">
+            <div class="fundindex_bannerhd">
+                <ul></ul>
+            </div>
+            <div class="fundindex_bannerbd">
+                <ul></ul>
+            </div>
+        </div>
+        <div class="fundindex_route">
+            <div class="fundindex_warp">
+                <div class="route_container">
+                    <div class="fund_rank"><span>净值排行</span></div>
+                </div>
+                <div class="route_container">
+                    <div class="fund_devers"><span>估值排行</span></div>
+                </div>
+                <div class="route_container">
+                    <div class="fund_company"><span>基金公司</span></div>
+                </div>
+                <div class="route_container">
+                    <div class="fund_fund"><span>筛选基金</span></div>
+                </div>
+            </div>
+            <div class="fundindex_indexdata js-fundindex_indexdata">
+                <div class="indexdata_shindex"><span class="index_name">上证指数</span><span class="index_num num_en js-index_num">--</span><span class="index_state num_en js-index_state">--</span></div>
+                <div class="indexdata_szindex"><span class="index_name">深证指数</span><span class="index_num num_en js-index_num">--</span><span class="index_state num_en js-index_state">--</span></div>
+                <div class="indexdata_cyindex"><span class="index_name">创业指数</span><span class="index_num num_en js-index_num">--</span><span class="index_state num_en js-index_state">--</span></div>
+            </div>
+        </div>
+        <div class="fundindex_tag"></div>
+        <div class="fundindex_list">
+            <!-- <div class="fundindex_data">
+                <div class="data_forward"><div class="data_forward_up"><span class="data_fname">民生精选</span> <span class="data_invtyp">混合型</span><span class="data_fcode">39003</span></div><div class="data_forward_down"><span class="data_cat">股价</span><span class="data_situp">利好</span><span class="data_t">重仓股停牌等重大事项的公告</span></div></div>
+                <div class="data_backward"><div class="overlay"><div class="data_up">日涨幅</div><div class="data_num _up num_en">+2.03%</div></div></div>
+            </div>
+            <div class="fundindex_more">查看更多</div> -->
+        </div>
+        <div class="fundindex_upbord">
+            <div class="fundindex_title" data-type="module"><i class="fundindex_icon"></i><span class="fundindex_subtitle">一周领涨板块</span><i class="fundindex_mr"></i></div>
+            <div class="bordtitle"><span class="bordname js-bordname">--</span><span class="bordsubt">周涨幅</br><i class="bord_num js-bord_num">--</i></span></div>
+            <ul class="bord_ctn js-bord_ctn">
+                <!-- ddd -->
+                <li class="bord_data"><i class="bord_icon"></i>
+                    <div class="bord_dt">
+                        <div><span class="bd_dtname">--</span></br><span class="bd_dtcode">--</span></div><span class="bd_dtpercent _up">--</span></div>
+                </li>
+                <!-- sdd -->
+            </ul>
+        </div>
+        <div class="fundindex_upconcept">
+            <div class="fundindex_title" data-type="concept"><i class="fundindex_icon"></i><span class="fundindex_subtitle">一周领涨概念</span><i class="fundindex_mr"></i></div>
+            <div class="bordtitle_y"><span class="bordname js-bordname">--</span><span class="bordsubt">周涨幅</br><i class="bord_num js-bord_num">--</i></span></div>
+            <ul class="index_ctn js-index_ctn">
+                <!-- ddd -->
+                <li class="bord_data"><i class="index_icon"></i>
+                    <div class="bord_dt">
+                        <div><span class="bd_dtname">--</span></br><span class="bd_dtcode">001158</span></div><span class="bd_dtpercent _up">--</span></div>
+                </li>
+                <!-- sdd -->
+            </ul>
+        </div>
+        <div class="fundindex_upconcept">
+            <div class="fundindex_title"><i class="fundindex_icon"></i><span class="fundindex_subtitle">最新资讯</span><i class="fundindex_mr"></i></div>
+            <ul class="info_ctn js-info_ctn">
+            </ul>
+        </div>
+        <div class="fundmanager">
+            <div id="slider">
+                <div class="manager_title">推荐基金经理 <span class="manager_more js-manager_more"></span></div>
+            </div>
+        </div>
+    </div>
+    <!-- <script src="http://qiniu.csfimg.com/fund/js/lib/jquery.min.js"></script>
+    <script src="http://qiniu.csfimg.com/fund/js/lib/moment.js"></script>
+    <script src="http://qiniu.csfimg.com/fund/js/lib/fastclick.js"></script>
+    <script src="http://qiniu.csfimg.com/fund/js/lib/TouchSlide.1.1.js"></script> -->
+    <script src="assets/js/lib/iSlider.js"></script>
+    <script src="assets/js/lib/iSlider.animate.js"></script>
+    <script src="assets/js/lib/jquery.min.js"></script>
+    <script src="assets/js/lib/moment.js"></script>
+    <script src="assets/js/lib/fastclick.js"></script>
+    <script src="assets/js/lib/TouchSlide.1.1.js"></script>
+    <script src="assets/js/helper.js"></script>
+    <script src="assets/js/public.js"></script>
+    <!-- 公共脚本 -->
+    <script src="static/fund/include/index.js"></script>
+</body>
+
+</html>

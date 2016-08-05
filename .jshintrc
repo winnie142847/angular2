@@ -1,0 +1,46 @@
+
+/*
+.jshintrc文件配置(这里最后一个value值不能加分号) 参考（https://segmentfault.com/a/1190000000512948）
+http://www.tuicool.com/articles/AzIRviR
+http://www.xiabingbao.com/gulp/2015/10/15/gulp-jshint/
+http://life.leanote.com/post/gulp-jshint(定义全局变量 gulp jshint $ 未定义)
+
+ "devel": true, //定义用于调试的全局变量：alert(console测试不会报错)
+ "newcap": true, //构造器函数首字母大写
+ "noarg": true,//禁止使用 arguments.caller 和 arguments.callee ，未来会被弃用， ECMAScript 5 禁止使用
+ "undef": true,//变量未定义
+ "strict": false, //true 严格模式
+*/
+
+{
+  "asi": true,
+  "browser": true,
+  "devel": true,
+  "es5": true,
+  "expr": true,
+  "eqeqeq": false,
+  "eqnull": false,
+  "sub":true,
+  "newcap": true,
+  "noarg": true,
+  "laxbreak":true,
+  "laxcomma":true,
+  "regexp":true,
+  "loopfunc":true,
+  "esnext": true,
+  "bitwise": true,
+  "curly": true,
+  "immed": true,
+  "latedef": false,
+  "Helper": true,
+  "undef": true,
+  "proto": true,
+  "passfail":true,
+  "strict": false,
+  "globals": {
+    "$": false,
+    "jQuery": false,
+    "Helper":false
+  },
+  "smarttabs": true
+}

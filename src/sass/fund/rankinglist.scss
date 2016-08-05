@@ -1,0 +1,321 @@
+  @charset "utf-8";
+  @import "../base/reset";
+body {
+    display: none;
+}
+
+.tip_info {
+    background-color: #f5f8fc;
+    padding: .5rem;
+    color: #b2b2c5;
+    border-bottom: 1px solid #e4e4e4;
+}
+
+.tip_info i {
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    background: no-repeat url('mistick.png') center;
+    background-size: 80% auto;
+    vertical-align: middle;
+    margin-left: 1rem;
+}
+
+.type_ctn{
+    background-color: #f5f8fc;
+}
+.fund_head {
+    position: relative;
+    height: 3rem;
+    line-height: 3rem;
+    border: 1px solid #ddd;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    font-size: 1rem;
+    overflow: hidden;
+    width: 90rem;
+    z-index: 5;
+}
+
+.fund_block {
+    position: relative;
+    float: left;
+    /*display: inline-block;*/
+    text-align: center;
+    width: 5rem;
+    background-color: #f5f8fc;
+}
+
+.fund_blocks {
+    position: relative;
+    float: left;
+    /*display: inline-block;*/
+    text-align: center;
+    width: 6rem;
+}
+
+.fund_headactive {
+    font-size: 1rem;
+    color: #ff6e4b;
+}
+
+.fund_headactives {
+    font-size: 1rem;
+    color: #ff6e4b;
+}
+
+.fund_headactives:before {
+    position: absolute;
+    content: '';
+    display: inline-block;
+    border-bottom: .2rem solid;
+    width: 4.5rem;
+    height: 2rem;
+    left: .75rem;
+    margin-top: .8rem;
+}
+
+.fund_headactive:before {
+    position: absolute;
+    content: '';
+    display: inline-block;
+    border-bottom: .2rem solid;
+    width: 4.5rem;
+    height: 2rem;
+    left: .35rem;
+    margin-top: .8rem;
+}
+
+.sort {
+    background: url(../../../assets/img/sort.png) no-repeat;
+    background-size: 16% auto;
+    background-position: 5.8rem center;
+}
+
+.sort_on {
+    /*background: #dde1e7 url(../../../assets/img/sort_on.png) no-repeat;*/
+    background: #dde1e7;
+    background-size: 18% auto;
+    background-position: 5.8rem center;
+}
+
+.sort_div {
+    display: none;
+    position: absolute;
+    background-color: #f5f8fc;
+    margin-top: 3rem;
+    margin-left: 0rem;
+    border: 1px solid #e4e4e4;
+    border-top: 0;
+    width: 6.30rem;
+    text-align: center;
+    color: #344245;
+}
+
+/*日涨幅*/
+.sort_span {
+    display: block;
+    width: 6.5rem;
+    text-align: center;
+    height: 3rem;
+    margin-right: .2rem;
+}
+.sort_span .arrow{
+    position: relative;
+    left: 0.4rem;
+    top: 0.8rem;
+    width: 0;
+    height: 0;
+    border-left: .2rem solid transparent;
+    border-right: .2rem solid transparent;
+    border-top: .3rem solid #344245;
+}
+.sort_on .arrow{
+    border-top: .3rem solid #ff6e4b;
+}
+
+.custfund_up {
+    float: right;
+    height: 100%;
+    line-height: 3rem;
+    display: inline-block;
+}
+
+.sort_s{
+    display: block;
+    width: 9rem;
+    text-align: center;
+}
+
+
+.sort_div i {
+    padding: .1rem 0;
+    border-top: 1px solid #e4e4e4;
+    display: block;
+    font-style: normal;
+}
+
+.custfund_head {
+    z-index: 2;
+    width: 100%;
+    position: fixed;
+    top: 3rem;
+    height: 3rem;
+    color: #344245;
+    font-size: 0.94rem;
+    border-bottom: 1px solid #e4e4e4;
+    background-color: white;
+}
+
+.fund_data:first-child {
+    border-top: 1px solid #ddd;
+}
+
+.custfund_name {
+    height: 100%;
+    line-height: 3rem;
+    display: inline-block;
+    width: 51%;
+    text-indent: 2rem;
+}
+
+.custfund_value {
+    height: 100%;
+    line-height: 3rem;
+    display: inline-block;
+    width: 17%;
+    /*text-indent: 1rem;*/
+}
+/*估算涨幅*/
+.estimate_custfund_up{
+    width: 30%;
+    float: right;
+    height: 100%;
+    line-height: 3rem;
+    display: inline-block;
+}
+.estimate_custfund_up .sort_s{
+    display: block;
+    width: 9rem;
+    text-align: center;
+}
+
+
+
+#wrapper {
+    position: absolute;
+    left: 0;
+    top: 6rem;
+    z-index: 1;
+    width: 100%;
+    overflow: auto;
+}
+
+
+/*.fd_icon{
+    position: absolute;
+    display: inline-block;
+    width: 4rem;
+    left:.5rem;
+    border-top: .2rem solid #ff6e4b;
+    margin-top: -.2rem;
+}*/
+
+
+/* iphone 5 */
+
+@media only screen and (device-height:568px) and (max-device-width:640px) and (-webkit-min-device-pixel-ratio:2) {
+    .tip_info{
+        font-size: .9rem;
+    }
+}
+
+
+/* iphone 4 */
+
+@media only screen and (device-height:480px) and (-webkit-min-device-pixel-ratio:2) {
+    .tip_info{
+        font-size: .9rem;
+    }
+}
+
+.fund_data {
+    border: 1px solid #ddd;
+    border-top: none;
+    height: 5rem;
+    width: 100%;
+    background-color: #ffffff;
+}
+
+.fund_data div {
+    vertical-align: middle;
+    display: inline-table;
+    ;
+}
+
+.fund_fi {
+    width: 37%;
+    padding: 1rem 0rem .5rem .8rem;
+}
+
+.fund_se {
+    width: 21%;
+    padding: 1rem 0rem .5rem .8rem;
+    margin-left: 1rem;
+}
+
+.fund_chg {
+    float: right;
+    padding-right: 1.33rem;
+    height: 5rem;
+    line-height: 5rem;
+    font-size: 1.1rem;
+    
+}
+
+.fund_fname {
+    font-size: 1.2rem;
+    display: block;
+    width: 10rem;
+    height: 1.3rem;
+    line-height: 1.3rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.fund_fcode {
+    display: inline-block;
+    margin-top: .5rem;
+    font-size: .9rem;
+    color: #aaa;
+}
+
+.fund_invtyp {
+    font-size: .9rem;
+    background-color: #faa226;
+    color: #fff;
+    border-radius: .3rem;
+    padding: 0 .2rem;
+    margin-left: .5rem;
+}
+
+.fund_net {
+    font-size: 1.14rem;
+    width: 5rem;
+    display: inline-block;
+    text-align: left;
+}
+
+.fund_dt {
+    display: inline-block;
+    font-size: .9rem;
+    margin-top: 0.2rem;
+    color: #aaaaaa;
+}
+
+#type div:last-child div {
+    display: none;
+}
+
