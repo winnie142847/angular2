@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>基金详情</title>
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+	<meta name="format-detection" content="telephone=no,email=no,adress=no">
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+
+	<link rel="stylesheet" href="../../assets/css/reset.css">
+	<!-- 公共样式表 -->
+	<link rel="stylesheet" href="include/funddetail.css?version=8">
+</head>
+<body>
+	<!-- <section>
+		<div class="fund_toolbar">
+		<div id="header">
+		<a href="/" class="back">返回</a>基金详情
+	</div>	</section> -->
+
+	<div class="fund_content">
+		<section>
+			<div class="fund_head">
+				<div class="fund_up">
+					<div class="fund_title bb-4"><p class="inline title">数据加载中...</p>&nbsp;&nbsp;<span class="inline title_num va_m"></span></div>
+					<div class="fund_num bb-4">
+						<div class="num_left">
+							<p>万份收益</p>
+							<span class="chg">--</span>
+						</div>
+						<div class="num_right">
+							<p>7日年化</p>
+							<span class="net">--</span>
+						</div>
+						
+					</div>
+					<div class="fund_type bb-4">
+						<div class="f-1-g invtyp">--</div><div class="c-b risk">--</div><div class="grade_star"><span class="va_m">评级</span>
+							<div class="star">
+								
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="fund_chart bb-4">
+					<div class="chart_head bb-4 bg-g">
+						<div><p class="fb-r chart_fb">万元收益</p></div><div><p>7日年化</p></div>
+					</div>
+
+					<div class="year">
+						<div class="year_div ddd"><div class="j_m e4" tg="m">近一月</div><div class="m_m" tg="q">近三月</div><div class="s_m" tg="h">近六月</div><div class="d_m" tg="y">近一年</div></div>
+					</div>
+
+					<div class="valuation none">
+						<div class="year_div"><div class="j_m e4" tg="m">近一月</div><div class="m_m" tg="q">近三月</div><div class="s_m" tg="h">近六月</div><div class="d_m" tg="y">近一年</div></div>
+					</div>
+					
+					<div id="container"></div>
+					<div class="con_bottom"><div class="left"></div><div class="con"></div><div class="right"></div></div>
+
+				</div>
+				
+				<div class="fund_worth bb-4">
+					<div class="worth_title"><h3>历史收益率<i class="fr worth_btn top_07" tg="1"></i></h3></div>
+					<div class="worth_list">
+						<div class="list_div bg-g"><i>日期</i><i>万份收益</i><i>7日年化</i></div>
+						<ul class="worth_ul">
+						</ul>
+						<div class="cha_ks">查看更多</div>
+					</div>
+				</div>
+
+				<div class="basic_infor bb-4"><h3>基本信息</h3><a href="javascript:void(0)" class="fr"><span class="org"></span><i class="right_07"></i></a></div>
+				<div class="fund_bonus bb-4">
+					<div class="bonus_title"><h3>分红配送<i class="fr bottom_07 bonus_btn" tg="0"></i></h3></div>
+					<div class="bonus_div none">
+						<p class="bg-g">成立以来，总计分红</p>
+						<div class="bonus_ge">
+							<div>
+								<p class="honus_time">2015-01-21</p><p>每份基金份额折算1.00429份</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="fund_manager bb-4">
+					<div class="man_title"><h3>基金经理<i class="fr bottom_07 man_btn" tg="0"></i></h3></div>
+					<div class="man_div none">
+						<p class="bg-g">基金经理变动一览</p>
+						<div class="man_ge">
+							<div class="ge_div bb-4"><i>起始期</i><i>截止期</i><i>基金经理</i><i>任期回报</i></div>
+							<ul class="man_ul">
+							</ul>
+						</div>
+						<p class="bg-g">现任基金经理简介</p>
+						<div class="brief_div">
+						</div>
+					</div>
+				</div>
+				<!-- <div class="fund_notice bb-4">
+					<p>基金公告<i class="fr bottom_07 notice_btn"></i></p>
+					<div class="notice_div none">
+						<ul class="notice_ul">
+							<li><span>需求景气，业绩提升潜力非常高</span><p class="fr c-g1">04-07</p></li>
+							<li><span>5只铁路股份享1.5万亿盛宴</span><p class="fr c-g1">04-07</p></li>
+						</ul>
+						<a href="#">查看更多<i class=""></i></a>
+					</div>
+				</div> -->
+				<div class="fund_optional"><i class="add_03"></i><span>加自选</span></div>
+				<div class="fund_tional"><i class="del_03"></i><span>刪自选</span></div>
+			</div>
+		</section>
+	</div>
+	<script src="http://qiniu.csfimg.com/fund/js/lib/jquery.min.js"></script>
+	<script src="http://qiniu.csfimg.com/fund/js/lib/moment.js"></script>
+	<script src="http://qiniu.csfimg.com/fund/js/lib/highstock.js"></script>
+	<script src="http://qiniu.csfimg.com/fund/js/lib/fastclick.js"></script>
+	<script src="../../assets/js/helper.js"></script>
+	<script src="../../assets/js/public.js"></script>
+	<!-- 公共脚本 -->
+	<script src="include/fund_details.js?v=344"></script>
+	
+</body>
+</html>
